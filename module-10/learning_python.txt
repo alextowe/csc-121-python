@@ -1,0 +1,5 @@
+In Python you can create variables and assign values to them.
+In Python you can use loops to repeat actions.
+In Python you can define functions to organize code.
+In Python you can use lists and dictionaries to store data.
+In Python you can use conditional statements to make decisions.
