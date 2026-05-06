@@ -1,0 +1,21 @@
+# Upsun configuration, generated using AI at: 2026-05-06T16:45:59-04:00
+# AI can make mistakes. Please modify this file to suit your needs.
+applications:
+  learning_log:
+    type: python:3.14
+
+    source:
+      root: learning_log
+
+    hooks:
+      build: |
+        set -ex
+        pip install -r requirements.txt
+        # Export DATABASE_URL for database connection if needed
+        echo >> .environment 'export DATABASE_URL="$DB_SCHEME://$DB_USERNAME:$DB_PASSWORD@$DB_HOST:$DB_PORT/$DB_PATH"'
+
+    web:
+      commands:
+        start: python manage.py runserver 0.0.0.0:$PORT
+
+# No services or routes defined as no database or other services detected in the provided context.
